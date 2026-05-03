@@ -1,7 +1,6 @@
 const videoGroups = [
   {
-    title: "סרטונים חדשיים תצוגת מחשב",
-    videos: [
+        videos: [
       {
         title: "יום הולדת 23",
         id: "NJvRGkxUY_I"
@@ -25,7 +24,6 @@ const videoGroups = [
     ]
   },
   {
-    title: "סרטונים חדשיים תצוגת נייד",
     videos: [
       {
         title: "יום הולדת 23",
