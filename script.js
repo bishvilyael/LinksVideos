@@ -21,7 +21,6 @@ const linksContainer = document.getElementById("linksContainer");
 const videosPanel = document.getElementById("videosPanel");
 const videoGroupsContainer = document.getElementById("videoGroupsContainer");
 const videoPlayer = document.getElementById("videoPlayer");
-const videoTitle = document.getElementById("videoTitle");
 const youtubeFrame = document.getElementById("youtubeFrame");
 
 links.forEach(item => {
@@ -74,7 +73,6 @@ if (selectedGroup) {
     const selectedVideo = selectedGroup.videos.find(video => video.id === select.value);
     if (!selectedVideo) return;
 
-    videoTitle.textContent = selectedVideo.title;
     youtubeFrame.src = `https://www.youtube.com/embed/${selectedVideo.id}`;
     videoPlayer.classList.remove("hidden");
   });
