@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>מפות יעלים</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="card">
+    <h1>מפות יעלים</h1>
+    <p class="subtitle">קישורים למפות ולתוצרים</p>
+
+    <div id="linksContainer"></div>
+
+    <section id="videosPanel" class="videos-panel hidden">
+      <h2>סרטונים</h2>
+
+      <div id="videoGroupsContainer"></div>
+
+      <div id="videoPlayer" class="video-player hidden">
+        <h3 id="videoTitle"></h3>
+
+        <div class="video-wrapper">
+          <iframe
+            id="youtubeFrame"
+            title="YouTube video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="videos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
