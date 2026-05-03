@@ -1,20 +1,20 @@
 const links = [
   {
-    title: "מפה מצטברת מתחילת המיזם - 4297 נקודות במפה",
-    url: "https://bishvilyael.github.io/FullMap_J_Split/"
+    title: "מפה מצטברת - 4297 נקודות. ",
+    url: "https://bishvilyael.github.io/FullMap_J_Split/",
   },
   {
-    title: "מפה חדשית - ניתן להחליף חודש בתוך המפה",
-    url: "https://bishvilyael.github.io/PartialMap_Multi/"
+    title: "מפה חדשית - החלפת חודש בתוך המפה.",
+    url: "https://bishvilyael.github.io/PartialMap_Multi/",
   },
   {
     title: "מפה מצטברת Google Maps",
-    url: "https://www.google.com/maps/d/edit?mid=1ZV3wyw_U2qiEHsuJ9LmLKnY8BGG57NU&usp=sharing"
+    url: "https://www.google.com/maps/d/edit?mid=1ZV3wyw_U2qiEHsuJ9LmLKnY8BGG57NU&usp=sharing",
   },
   {
     title: "קישור לאתר - בשביל יעל",
-    url: "https://www.beshvilyael.com/"
-  }
+    url: "https://www.beshvilyael.com/",
+  },
 ];
 
 const linksContainer = document.getElementById("linksContainer");
@@ -23,7 +23,7 @@ const videoGroupsContainer = document.getElementById("videoGroupsContainer");
 const videoPlayer = document.getElementById("videoPlayer");
 const youtubeFrame = document.getElementById("youtubeFrame");
 
-links.forEach(item => {
+links.forEach((item) => {
   const link = document.createElement("a");
   link.className = "link-button";
   link.href = item.url;
@@ -44,8 +44,8 @@ videosButton.addEventListener("click", () => {
 
 const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
-const selectedGroup = videoGroups.find(group =>
-  isMobile ? group.type === "mobile" : group.type === "desktop"
+const selectedGroup = videoGroups.find((group) =>
+  isMobile ? group.type === "mobile" : group.type === "desktop",
 );
 
 if (selectedGroup) {
@@ -60,7 +60,7 @@ if (selectedGroup) {
   defaultOption.value = "";
   select.appendChild(defaultOption);
 
-  selectedGroup.videos.forEach(video => {
+  selectedGroup.videos.forEach((video) => {
     const option = document.createElement("option");
     option.textContent = video.title;
     option.value = video.id;
@@ -70,7 +70,9 @@ if (selectedGroup) {
   select.addEventListener("change", () => {
     if (!select.value) return;
 
-    const selectedVideo = selectedGroup.videos.find(video => video.id === select.value);
+    const selectedVideo = selectedGroup.videos.find(
+      (video) => video.id === select.value,
+    );
     if (!selectedVideo) return;
 
     youtubeFrame.src = `https://www.youtube.com/embed/${selectedVideo.id}`;
