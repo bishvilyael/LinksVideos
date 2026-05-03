@@ -26,17 +26,14 @@ const youtubeFrame = document.getElementById("youtubeFrame");
 
 links.forEach(item => {
   const link = document.createElement("a");
-
   link.className = "link-button";
   link.href = item.url;
   link.textContent = item.title;
   link.target = "_blank";
   link.rel = "noopener noreferrer";
-
   linksContainer.appendChild(link);
 });
 
-/* כפתור סרטונים */
 const videosButton = document.createElement("button");
 videosButton.className = "link-button";
 videosButton.textContent = "סרטונים";
@@ -46,23 +43,15 @@ videosButton.addEventListener("click", () => {
   videosPanel.classList.toggle("hidden");
 });
 
-/* זיהוי מחשב / נייד */
 const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
-/* הצגת רשימה אחת בלבד לפי סוג התצוגה */
-const filteredGroups = videoGroups.filter(group => {
-  if (isMobile && group.title.includes("נייד")) return true;
-  if (!isMobile && group.title.includes("מחשב")) return true;
-  return false;
-});
+const selectedGroup = videoGroups.find(group =>
+  isMobile ? group.type === "mobile" : group.type === "desktop"
+);
 
-/* בניית רשימת הסרטונים */
-filteredGroups.forEach(group => {
+if (selectedGroup) {
   const groupBox = document.createElement("div");
   groupBox.className = "video-group";
-
-  const title = document.createElement("h3");
-  title.textContent = group.title;
 
   const select = document.createElement("select");
   select.className = "video-select";
@@ -72,7 +61,7 @@ filteredGroups.forEach(group => {
   defaultOption.value = "";
   select.appendChild(defaultOption);
 
-  group.videos.forEach(video => {
+  selectedGroup.videos.forEach(video => {
     const option = document.createElement("option");
     option.textContent = video.title;
     option.value = video.id;
@@ -82,14 +71,14 @@ filteredGroups.forEach(group => {
   select.addEventListener("change", () => {
     if (!select.value) return;
 
-    const selectedVideo = group.videos.find(video => video.id === select.value);
+    const selectedVideo = selectedGroup.videos.find(video => video.id === select.value);
+    if (!selectedVideo) return;
 
     videoTitle.textContent = selectedVideo.title;
     youtubeFrame.src = `https://www.youtube.com/embed/${selectedVideo.id}`;
     videoPlayer.classList.remove("hidden");
   });
 
-  groupBox.appendChild(title);
   groupBox.appendChild(select);
   videoGroupsContainer.appendChild(groupBox);
-});
+}
