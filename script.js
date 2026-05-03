@@ -4,7 +4,7 @@ const links = [
     url: "https://bishvilyael.github.io/FullMap_J_Split/",
   },
   {
-    title: "מפה חדשית - החלפת חודש בתוך המפה.",
+    title: "מפה חדשית - החלפת חודש במפה.",
     url: "https://bishvilyael.github.io/PartialMap_Multi/",
   },
   {
