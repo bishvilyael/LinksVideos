@@ -24,7 +24,6 @@ const videoPlayer = document.getElementById("videoPlayer");
 const videoTitle = document.getElementById("videoTitle");
 const youtubeFrame = document.getElementById("youtubeFrame");
 
-/* קישורים רגילים */
 links.forEach(item => {
   const link = document.createElement("a");
 
@@ -47,8 +46,18 @@ videosButton.addEventListener("click", () => {
   videosPanel.classList.toggle("hidden");
 });
 
-/* בניית רשימות הסרטונים */
-videoGroups.forEach(group => {
+/* זיהוי מחשב / נייד */
+const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+/* הצגת רשימה אחת בלבד לפי סוג התצוגה */
+const filteredGroups = videoGroups.filter(group => {
+  if (isMobile && group.title.includes("נייד")) return true;
+  if (!isMobile && group.title.includes("מחשב")) return true;
+  return false;
+});
+
+/* בניית רשימת הסרטונים */
+filteredGroups.forEach(group => {
   const groupBox = document.createElement("div");
   groupBox.className = "video-group";
 
