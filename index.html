@@ -13,26 +13,24 @@
     <p class="subtitle">קישורים למפות ועוד</p>
 
     <div id="linksContainer"></div>
+<section id="videosPanel" class="videos-panel hidden">
+  <div id="videoGroupsContainer"></div>
 
-    <section id="videosPanel" class="videos-panel hidden">
-      <h2>סרטונים</h2>
+  <div id="videoPlayer" class="video-player hidden">
+    <h3 id="videoTitle"></h3>
 
-      <div id="videoGroupsContainer"></div>
+    <div class="video-wrapper">
+      <iframe
+        id="youtubeFrame"
+        title="YouTube video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
 
-      <div id="videoPlayer" class="video-player hidden">
-        <h3 id="videoTitle"></h3>
-
-        <div class="video-wrapper">
-          <iframe
-            id="youtubeFrame"
-            title="YouTube video"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-    </section>
   </main>
 
   <script src="videos.js"></script>
