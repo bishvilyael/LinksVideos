@@ -12,7 +12,7 @@ const videoGroups = [
   {
     type: "mobile",
     videos: [
-      { title: "יום הולדת 23", id: "NJvRGkxUY_I" },
+      { title: "יום הולדת 23", id: "yTXEEGXGbPE" },
       { title: "פברואר 2026", id: "WhjTJIt3s1A" },
       { title: "מרץ 2026", id: "a4EFKI9WJUw" },
       { title: "יום הזכרון 2026", id: "tRGOq46xfds" },
