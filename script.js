@@ -5,7 +5,7 @@ const links = [
   },
   {
     title:"מפה חודשית - ניתן לבחור חודש בכותרת המפה",
-    url: "https://bishvilyael.github.io/Map_PartialMap/",
+    url: "https://bishvilyael.github.io/Map_Partial/",
   },
   {
     title: "מפה מצטברת Google Maps",
