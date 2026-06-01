@@ -1,6 +1,6 @@
 const links = [
   {
-    title: "מפה מצטברת -  4390 נקודות",
+    title: "מפה מצטברת -  4397 נקודות",
     url: "https://bishvilyael.github.io/Map_Full/",
   },
   {
