@@ -7,7 +7,8 @@ const videoGroups = [
       { title: "מרץ 2026", id: "l43j92i5e1o" },
       { title: "יום הזכרון 2026", id: "LkW4VYv7ow8" },
       { title: "אפריל 2026", id: "fh5qS6b1L6c" },
-      { title: "מאי 2026", id: "mXR55we4D2I" }
+      { title: "מאי 2026", id: "mXR55we4D2I" },
+      { title: "בדיקה", id: "mXR55we4D2I" }
     ]
   },
   {
