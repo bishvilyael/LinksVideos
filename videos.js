@@ -8,6 +8,7 @@ const videoGroups = [
       { title: "יום הזכרון 2026", id: "LkW4VYv7ow8" },
       { title: "אפריל 2026", id: "fh5qS6b1L6c" },
       { title: "מאי - 2026", id: "mXR55we4D2I" }
+      { title: "יוני - 2026", id: "DXj9xMyKM7o" }
     ]
   },
   {
@@ -19,6 +20,7 @@ const videoGroups = [
       { title: "יום הזכרון 2026", id: "tRGOq46xfds" },
       { title: "אפריל 2026", id: "fh5qS6b1L6c" },
       { title: "מאי 2026", id: "EQWBD8VJ8Iw" }
+      { title: "מאי 2026", id: "cT3WbvXBhdc" }
     ]
   }
 ];
